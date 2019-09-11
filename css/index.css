@@ -134,3 +134,136 @@ html,
 body {
   height: 100%;
 }
+/* End Reset */
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.3rem;
+}
+h6 {
+  font-size: 1rem;
+}
+p {
+  font-size: 1.2rem;
+}
+@font-face {
+  font-family: 'Hepta Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/heptaslab/v2/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5wfcaZQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+body {
+  background-color: #333;
+  line-height: 1.8rem;
+}
+body #container {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 2%;
+  border-left: 0.1rem solid #b3e0ff;
+  border-right: 0.1rem solid #b3e0ff;
+}
+body #container header {
+  width: 100%;
+  margin-top: 2%;
+}
+body #container header nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  text-align: end;
+  font-family: 'Hepta Slab', sans-serif;
+  margin: 0;
+  margin-bottom: 2%;
+  padding: 0;
+}
+body #container header nav ul a {
+  width: 10%;
+  text-decoration: none;
+  color: black;
+}
+body #container header nav ul a:hover {
+  color: darkgrey;
+}
+body #container header nav ul a:active {
+  color: darkgreen;
+}
+body #container #vanity {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  width: 100%;
+  background-color: #e3e7e8;
+  border: 0.1rem solid #b3e0ff;
+  border-radius: 0.5rem;
+  padding: 5% 3%;
+  margin: 0;
+}
+body #container #vanity #image-n-caption {
+  width: 50%;
+}
+body #container #vanity #image-n-caption img {
+  width: 100%;
+}
+body #container #vanity h1 {
+  font-size: 3rem;
+  margin: 1% 0;
+}
+body #container #vanity h3 {
+  font-family: 'Montserrat', serif;
+  margin-bottom: 2%;
+}
+body #container #vanity p {
+  padding-top: 2%;
+  margin-bottom: 2%;
+  border-top: 0.1rem dotted #b3e0ff;
+}
+body #container #vanity button {
+  justify-content: flex-start;
+  height: 3rem;
+  width: 15rem;
+  background-color: #444;
+  color: #b3e0ff;
+  border: 0.1rem solid #b3e0ff;
+  cursor: pointer;
+}
+body #container #vanity button:hover {
+  background-color: #566;
+}
+body #container #vanity button:active {
+  border: 0.25rem solid #b3e0ff;
+}
+body #container #personal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+body #container #personal section {
+  width: 50%;
+}

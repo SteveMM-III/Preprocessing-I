@@ -57,3 +57,153 @@ html, body {
     height: 100%;
 }
 
+/* End Reset */
+html { font-size: 62.5%; }
+h1 {  font-size: 2.2rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size:  1.3rem; }
+h6 { font-size:  1rem; }
+
+p {
+  font-size: 1.2rem;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Montserrat&display=swap');
+
+@font1: 'Montserrat', serif;
+@font2: 'Hepta Slab', sans-serif;
+
+@dark: #333;
+@light: #b3e0ff;
+
+.flex-column() {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+.flex-row() {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.sideBorder() {
+  border-left: 0.1rem solid @light;
+  border-right: 0.1rem solid @light;
+}
+
+body {
+  background-color: @dark;
+  line-height: 1.8rem;
+
+  #container {
+    .flex-column();
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 2%;
+    .sideBorder();
+
+    header {
+      width: 100%;
+      margin-top: 2%;
+
+      nav ul {
+        .flex-row();
+        width: 100%;
+        justify-content: flex-end;
+        text-align: end;
+        font-family: @font2;
+        margin: 0;
+        margin-bottom:  2%;
+        padding: 0;
+
+        a {
+          width: 10%;
+          text-decoration: none;
+          color: black;
+        } // a
+
+        a:hover {
+          color: darkgrey;
+        } // a:hover
+
+        a:active {
+          color: darkgreen;
+        } // a:active
+      } // nav ul
+    } // header
+
+    #vanity {
+      .flex-column();
+      width: 100%;
+      background-color: #e3e7e8;
+      border: 0.1rem solid @light;
+      border-radius: 0.5rem;
+      padding: 5% 3%;
+      margin: 0;
+
+      #image-n-caption {
+        width: 50%;
+
+        img {
+          width: 100%;
+        } // img
+      } // #image-n-caption
+
+      h1 {
+        font-size: 3rem;
+        margin: 1% 0;
+      } // h1
+
+      h3 {
+        font-family: @font1;
+        margin-bottom: 2%;
+      } // h3
+
+      p {
+        padding-top: 2%;
+        margin-bottom: 2%;
+        border-top: 0.1rem dotted @light;
+      }
+
+      button {
+        justify-content: flex-start;
+        height: 3rem;
+        width: 15rem;
+        background-color: #444;
+        color: @light;
+        border: 0.1rem solid @light;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #566;
+      }
+
+      button:active {
+        border: 0.25rem solid @light;
+      }
+    } // #vanity
+
+    #personal {
+      .flex-row();
+
+      section {
+        width: 50%;
+      }
+    }
+  } // #container
+} // body
+
+
+
+
+
+
+
+
+
+
+
