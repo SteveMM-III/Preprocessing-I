@@ -190,7 +190,7 @@ body #container {
   border-top: 0.1rem solid #b3e0ff;
   border-bottom: 0.1rem solid #b3e0ff;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   body #container {
     width: 100%;
     margin: 0 1%;
@@ -256,10 +256,10 @@ body #container #vanity #image-n-caption img {
 body #container #vanity h1 {
   font-size: 3rem;
   margin: 1% 0;
+  font-size: 2.8rem;
 }
 @media (max-width: 500px) {
   body #container #vanity h1 {
-    font-size: 2.8rem;
     line-height: 2.2rem;
   }
 }

@@ -23,6 +23,7 @@
    border-right: 0.2rem solid @lightblue;
 }
 
+@full-width: ~"(max-width: 1000px)";
 @mobile: ~"(max-width: 500px)";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -110,7 +111,7 @@ body {
       border-top: 0.1rem solid @lightblue;
       border-bottom: 0.1rem solid @lightblue;
       
-      @media @mobile {
+      @media @full-width {
          width: 100%;
          margin: 0 1%;
       }
@@ -178,9 +179,9 @@ body {
          h1 {
             font-size: 3rem;
             margin: 1% 0;
+            font-size: 2.8rem;
             
             @media @mobile {
-               font-size: 2.8rem;
                line-height: 2.2rem;
             }
          } // h1
