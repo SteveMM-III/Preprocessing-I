@@ -16,7 +16,6 @@
 .flex-row() {
    display: flex;
    flex-direction: row;
-   width: 100%;
 }
 
 .sideBorder() {
@@ -112,31 +111,36 @@ body {
       header {
          width: 100%;
          margin-top: 2%;
+         display: flex;
 
-         nav ul {
-            .flex-row();
-            width: 100%;
-            justify-content: flex-end;
-            text-align: end;
-            font-family: @font2;
-            margin: 0;
-            margin-bottom:  2%;
-            padding: 0;
+         #spacer {
+            width: 60%;
+         }
 
-            a {
-               width: 10%;
-               text-decoration: none;
-               color: black;
+         nav {
+            width: 40%;
+            ul {
+               .flex-row();
+               justify-content: space-evenly;
+               font-family: @font2;
+               margin: 0;
+               margin-bottom:  2%;
+               padding: 0;
 
-               &:hover {
-                  color: darkgrey;
-               } // &:hover
+               a {
+                  text-decoration: none;
+                  color: black;
 
-               &:active {
-                  color: darkgreen;
-               } // &:active
-            } // a
-         } // nav ul
+                  &:hover {
+                     color: darkgrey;
+                  } // &:hover
+
+                  &:active {
+                     color: darkgreen;
+                  } // &:active
+               } // a
+            } // ul
+         } // nav
       } // header
 
       #vanity {

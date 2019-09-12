@@ -193,20 +193,24 @@ body #container {
 body #container header {
   width: 100%;
   margin-top: 2%;
+  display: flex;
+}
+body #container header #spacer {
+  width: 60%;
+}
+body #container header nav {
+  width: 40%;
 }
 body #container header nav ul {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: flex-end;
-  text-align: end;
+  justify-content: space-evenly;
   font-family: 'Hepta Slab', sans-serif;
   margin: 0;
   margin-bottom: 2%;
   padding: 0;
 }
 body #container header nav ul a {
-  width: 10%;
   text-decoration: none;
   color: black;
 }
@@ -265,7 +269,6 @@ body #container #vanity button:active {
 body #container #personal {
   display: flex;
   flex-direction: row;
-  width: 100%;
   margin: 2% 0;
 }
 body #container #personal section {
