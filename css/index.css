@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Hepta Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/heptaslab/v2/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5wfcaZQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,7 +148,7 @@ html,
 body {
   height: 100%;
 }
-/* End Reset */
+/***************** End Reset *****************/
 html {
   font-size: 62.5%;
 }
@@ -159,20 +173,6 @@ h6 {
 p {
   font-size: 1.2rem;
 }
-@font-face {
-  font-family: 'Hepta Slab';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/heptaslab/v2/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5wfcaZQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
 body {
   background-color: #333;
   line-height: 1.8rem;
@@ -185,8 +185,8 @@ body #container {
   margin: 0 auto;
   background-color: white;
   padding: 0 2%;
-  border-left: 0.1rem solid #b3e0ff;
-  border-right: 0.1rem solid #b3e0ff;
+  border-left: 0.2rem solid #b3e0ff;
+  border-right: 0.2rem solid #b3e0ff;
 }
 body #container header {
   width: 100%;
@@ -237,6 +237,7 @@ body #container #vanity h1 {
 }
 body #container #vanity h3 {
   font-family: 'Montserrat', serif;
+  margin-top: 1%;
   margin-bottom: 2%;
 }
 body #container #vanity p {
@@ -263,7 +264,62 @@ body #container #personal {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin: 2% 0;
 }
 body #container #personal section {
   width: 50%;
+}
+body #container #personal #sideA p {
+  margin-top: 1%;
+}
+body #container #personal #sideB {
+  margin-left: 2%;
+}
+body #container #personal #sideB h2 {
+  margin-bottom: 2%;
+}
+body #container #personal #sideB p {
+  padding: 2%;
+  border-left: 0.1rem solid #333;
+  border-right: 0.1rem solid #333;
+  border-top: 0.1rem solid #333;
+}
+body #container #personal #sideB p:nth-child(2) {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+body #container #personal #sideB p:last-child {
+  border-bottom: 0.1rem solid #333;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+body #container #history {
+  margin: 2% 0;
+  width: 100%;
+}
+body #container #history table {
+  width: 100%;
+  margin-top: 1%;
+  font-size: 1.2rem;
+}
+body #container #history table tr {
+  border-top: 0.1rem dotted #333;
+}
+body #container #history table tr:nth-child(even) {
+  background-color: #e3e7e8;
+}
+body #container #history table th,
+body #container #history table td {
+  text-align: center;
+  padding: 1%;
+}
+body #container footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: #333;
+  border: 0.1rem solid #b3e0ff;
+}
+body #container footer p {
+  padding: 3%;
+  color: #b3e0ff;
 }
