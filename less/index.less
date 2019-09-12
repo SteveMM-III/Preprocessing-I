@@ -23,6 +23,8 @@
    border-right: 0.2rem solid @lightblue;
 }
 
+@mobile: ~"(max-width: 500px)";
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
 License: none (public domain)
@@ -107,6 +109,11 @@ body {
       .sideBorder();
       border-top: 0.1rem solid @lightblue;
       border-bottom: 0.1rem solid @lightblue;
+      
+      @media @mobile {
+         width: 100%;
+         margin: 0 1%;
+      }
 
       header {
          width: 100%;
@@ -115,10 +122,18 @@ body {
 
          #spacer {
             width: 60%;
+            
+            @media @mobile {
+               display: none;
+            }
          }
 
          nav {
             width: 40%;
+            
+            @media @mobile {
+               width: 100%;
+            }
             ul {
                .flex-row();
                justify-content: space-evenly;
@@ -163,6 +178,11 @@ body {
          h1 {
             font-size: 3rem;
             margin: 1% 0;
+            
+            @media @mobile {
+               font-size: 2.8rem;
+               line-height: 2.2rem;
+            }
          } // h1
 
          h3 {
@@ -199,9 +219,18 @@ body {
       #personal {
          .flex-row();
          margin: 2% 0;
+         
+         @media @mobile {
+            .flex-column();
+         }
 
          section {
             width: 50%;
+            
+            @media @mobile {
+               width: 100%;
+               margin-bottom: 2%;
+            }
          } // section
 
          #sideA p{
