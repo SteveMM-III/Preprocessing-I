@@ -305,6 +305,9 @@ body #container #history table {
   margin-top: 1%;
   font-size: 1.2rem;
 }
+body #container #history table th {
+  font-weight: 800;
+}
 body #container #history table tr {
   border-top: 0.1rem dotted #333;
 }
