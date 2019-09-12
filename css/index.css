@@ -187,6 +187,8 @@ body #container {
   padding: 0 2%;
   border-left: 0.2rem solid #b3e0ff;
   border-right: 0.2rem solid #b3e0ff;
+  border-top: 0.1rem solid #b3e0ff;
+  border-bottom: 0.1rem solid #b3e0ff;
 }
 body #container header {
   width: 100%;
@@ -317,9 +319,13 @@ body #container footer {
   width: 100%;
   justify-content: center;
   background-color: #333;
-  border: 0.1rem solid #b3e0ff;
+  border-top: 0.1rem solid #b3e0ff;
+  border-left: 0.1rem solid #b3e0ff;
+  border-right: 0.1rem solid #b3e0ff;
 }
 body #container footer p {
+  text-align: center;
+  width: 100%;
   padding: 3%;
   color: #b3e0ff;
 }
