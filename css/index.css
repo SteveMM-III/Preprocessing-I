@@ -1,1 +1,372 @@
-/* Compile your LESS file! */
+@font-face {
+  font-family: 'Hepta Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/heptaslab/v2/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5wfcaZQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/***************** End Reset *****************/
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.3rem;
+}
+h6 {
+  font-size: 1rem;
+}
+p {
+  font-size: 1.2rem;
+}
+body {
+  background-color: #333;
+  line-height: 1.8rem;
+}
+body #container {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 2%;
+  border-left: 0.2rem solid #b3e0ff;
+  border-right: 0.2rem solid #b3e0ff;
+  border-top: 0.1rem solid #b3e0ff;
+  border-bottom: 0.1rem solid #b3e0ff;
+}
+@media (max-width: 1000px) {
+  body #container {
+    width: 100%;
+    margin: 0 1%;
+  }
+}
+body #container header {
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+}
+body #container header #spacer {
+  width: 60%;
+}
+@media (max-width: 500px) {
+  body #container header #spacer {
+    display: none;
+  }
+}
+body #container header nav {
+  width: 40%;
+}
+@media (max-width: 500px) {
+  body #container header nav {
+    width: 100%;
+  }
+}
+body #container header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: 'Hepta Slab', sans-serif;
+  margin: 0;
+  margin-bottom: 2%;
+  padding: 0;
+}
+body #container header nav ul a {
+  text-decoration: none;
+  color: black;
+}
+body #container header nav ul a:hover {
+  color: darkgrey;
+}
+body #container header nav ul a:active {
+  color: darkgreen;
+}
+body #container #vanity {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  width: 100%;
+  background-color: #e3e7e8;
+  border: 0.1rem solid #b3e0ff;
+  border-radius: 0.5rem;
+  padding: 5% 3%;
+  margin: 0;
+}
+body #container #vanity #image-n-caption {
+  width: 50%;
+}
+body #container #vanity #image-n-caption img {
+  width: 100%;
+}
+body #container #vanity h1 {
+  font-size: 3rem;
+  margin: 1% 0;
+  font-size: 2.8rem;
+}
+@media (max-width: 500px) {
+  body #container #vanity h1 {
+    line-height: 2.2rem;
+  }
+}
+body #container #vanity h3 {
+  font-family: 'Montserrat', serif;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+body #container #vanity p {
+  padding-top: 2%;
+  margin-bottom: 2%;
+  border-top: 0.1rem dotted #b3e0ff;
+}
+body #container #vanity button {
+  justify-content: flex-start;
+  height: 3rem;
+  width: 15rem;
+  background-color: #444;
+  color: #b3e0ff;
+  border: 0.1rem solid #b3e0ff;
+  cursor: pointer;
+}
+body #container #vanity button:hover {
+  background-color: #566;
+}
+body #container #vanity button:active {
+  border: 0.25rem solid #b3e0ff;
+}
+body #container #personal {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 0;
+}
+@media (max-width: 500px) {
+  body #container #personal {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+  }
+}
+body #container #personal section {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  body #container #personal section {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+}
+body #container #personal #sideA p {
+  margin-top: 1%;
+}
+body #container #personal #sideB {
+  margin-left: 2%;
+}
+body #container #personal #sideB h2 {
+  margin-bottom: 2%;
+}
+body #container #personal #sideB p {
+  padding: 2%;
+  border-left: 0.1rem solid #333;
+  border-right: 0.1rem solid #333;
+  border-top: 0.1rem solid #333;
+}
+body #container #personal #sideB p:nth-child(2) {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+body #container #personal #sideB p:last-child {
+  border-bottom: 0.1rem solid #333;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+body #container #history {
+  margin: 2% 0;
+  width: 100%;
+}
+body #container #history table {
+  width: 100%;
+  margin-top: 1%;
+  font-size: 1.2rem;
+}
+body #container #history table th {
+  font-weight: 800;
+}
+body #container #history table tr {
+  border-top: 0.1rem dotted #333;
+}
+body #container #history table tr:nth-child(even) {
+  background-color: #e3e7e8;
+}
+body #container #history table th,
+body #container #history table td {
+  text-align: center;
+  padding: 1%;
+}
+body #container footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: #333;
+  border-top: 0.1rem solid #b3e0ff;
+  border-left: 0.1rem solid #b3e0ff;
+  border-right: 0.1rem solid #b3e0ff;
+}
+body #container footer p {
+  text-align: center;
+  width: 100%;
+  padding: 3%;
+  color: #b3e0ff;
+}

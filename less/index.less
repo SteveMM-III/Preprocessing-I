@@ -1,7 +1,34 @@
-// Is this working?
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Montserrat&display=swap');
+
+@font1: 'Montserrat', serif;
+@font2: 'Hepta Slab', sans-serif;
+
+@dark: #333;
+@light: #e3e7e8;
+@lightblue: #b3e0ff;
+
+.flex-column() {
+   display: flex;
+   flex-direction: column;
+   margin: 2%;
+}
+
+.flex-row() {
+   display: flex;
+   flex-direction: row;
+}
+
+.sideBorder() {
+   border-left: 0.2rem solid @lightblue;
+   border-right: 0.2rem solid @lightblue;
+}
+
+@full-width: ~"(max-width: 1000px)";
+@mobile: ~"(max-width: 500px)";
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -17,43 +44,266 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+   display: block;
 }
 body {
-	line-height: 1;
+   line-height: 1;
 }
 ol, ul {
-	list-style: none;
+   list-style: none;
 }
 blockquote, q {
-	quotes: none;
+   quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+   content: '';
+   content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+   border-collapse: collapse;
+   border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+   height: 100%;
 }
 
+/***************** End Reset *****************/
+html { font-size: 62.5%; }
+h1 {  font-size: 2.2rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size:  1.3rem; }
+h6 { font-size:  1rem; }
+
+p {
+   font-size: 1.2rem;
+}
+
+body {
+   background-color: @dark;
+   line-height: 1.8rem;
+
+   #container {
+      .flex-column();
+      width: 60%;
+      margin: 0 auto;
+      background-color: white;
+      padding: 0 2%;
+      .sideBorder();
+      border-top: 0.1rem solid @lightblue;
+      border-bottom: 0.1rem solid @lightblue;
+      
+      @media @full-width {
+         width: 100%;
+         margin: 0 1%;
+      }
+
+      header {
+         width: 100%;
+         margin-top: 2%;
+         display: flex;
+
+         #spacer {
+            width: 60%;
+            
+            @media @mobile {
+               display: none;
+            }
+         }
+
+         nav {
+            width: 40%;
+            
+            @media @mobile {
+               width: 100%;
+            }
+            ul {
+               .flex-row();
+               justify-content: space-evenly;
+               font-family: @font2;
+               margin: 0;
+               margin-bottom:  2%;
+               padding: 0;
+
+               a {
+                  text-decoration: none;
+                  color: black;
+
+                  &:hover {
+                     color: darkgrey;
+                  } // &:hover
+
+                  &:active {
+                     color: darkgreen;
+                  } // &:active
+               } // a
+            } // ul
+         } // nav
+      } // header
+
+      #vanity {
+         .flex-column();
+         width: 100%;
+         background-color: @light;
+         border: 0.1rem solid @lightblue;
+         border-radius: 0.5rem;
+         padding: 5% 3%;
+         margin: 0;
+
+         #image-n-caption {
+            width: 50%;
+
+            img {
+               width: 100%;
+            } // img
+         } // #image-n-caption
+
+         h1 {
+            font-size: 3rem;
+            margin: 1% 0;
+            font-size: 2.8rem;
+            
+            @media @mobile {
+               line-height: 2.2rem;
+            }
+         } // h1
+
+         h3 {
+            font-family: @font1;
+            margin-top: 1%;
+            margin-bottom: 2%;
+         } // h3
+
+         p {
+            padding-top: 2%;
+            margin-bottom: 2%;
+            border-top: 0.1rem dotted @lightblue;
+         } // p
+
+         button {
+            justify-content: flex-start;
+            height: 3rem;
+            width: 15rem;
+            background-color: #444;
+            color: @lightblue;
+            border: 0.1rem solid @lightblue;
+            cursor: pointer;
+
+            &:hover {
+               background-color: #566;
+            } // &:hover
+
+            &:active {
+               border: 0.25rem solid @lightblue;
+            } // &:active
+         } // button
+      } // #vanity
+
+      #personal {
+         .flex-row();
+         margin: 2% 0;
+         
+         @media @mobile {
+            .flex-column();
+         }
+
+         section {
+            width: 50%;
+            
+            @media @mobile {
+               width: 100%;
+               margin-bottom: 2%;
+            }
+         } // section
+
+         #sideA p{
+            margin-top: 1%;
+         } // #sideA p
+
+         #sideB {
+            margin-left: 2%;
+
+            h2 {
+               margin-bottom: 2%;
+            } // h2
+
+            p {
+               padding: 2%;
+               border-left: 0.1rem solid @dark;
+               border-right: 0.1rem solid @dark;
+               border-top: 0.1rem solid @dark;
+
+               &:nth-child(2) {
+                  border-radius:  0.5rem 0.5rem 0 0;
+               } // &:nth-child(2)
+
+               &:last-child {
+                  border-bottom: 0.1rem solid @dark;
+                  border-radius: 0 0 0.5rem 0.5rem;
+               } // &:last-child
+            } // p
+         } // #sideB
+      } // #personal
+
+      #history {
+         margin: 2% 0;
+         width: 100%;
+
+         table {
+            width: 100%;
+            margin-top: 1%;
+            font-size: 1.2rem;
+
+            th { font-weight: 800; }
+
+            tr {
+               border-top: 0.1rem dotted @dark;
+
+               &:nth-child(even) {
+                  background-color: @light;
+               } // &:nth-child(even)
+            } // tr
+
+            th, td {
+               text-align: center;
+               padding: 1%;
+            } // th, td
+         } // table
+      } // #history
+
+      footer {
+         .flex-row();
+         width: 100%;
+         justify-content: center;
+         background-color: @dark;
+         border-top: 0.1rem solid @lightblue;
+         border-left: 0.1rem solid @lightblue;
+         border-right: 0.1rem solid @lightblue;
+
+         p {
+            text-align: center;
+            width: 100%;
+            padding: 3%;
+            color: @lightblue;
+         } // p
+      } // footer
+   } // #container
+} // body
